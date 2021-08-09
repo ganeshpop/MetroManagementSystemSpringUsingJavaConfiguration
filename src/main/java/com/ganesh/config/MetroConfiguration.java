@@ -66,16 +66,3 @@ public class MetroConfiguration {
         return metroPresentation;
     }
 }
-/*    <!-->Dao Layer<-->
-    <bean id="persistence" class="com.ganesh.persistence.MetroDao" />
-
-    <!-->Service Layer<-->
-    <bean id="service" class="com.ganesh.service.MetroService" >
-        <property name="metroDao" ref="persistence"/>
-    </bean>
-
-    <!-->Presentation Layer<-->
-    <bean id="presentation" class="com.ganesh.presentation.MetroPresentation" >
-        <property name="metroService" ref="service"/>
-    </bean>
-*/
