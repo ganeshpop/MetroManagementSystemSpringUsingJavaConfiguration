@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
         ApplicationContext metroContainer = new AnnotationConfigApplicationContext(MetroConfiguration.class);
-        MetroPresentationInterface metroPresentation = (MetroPresentationInterface) metroContainer.getBean("MetroPresentation");
+        MetroPresentationInterface metroPresentation = (MetroPresentationInterface) metroContainer.getBean("metroPresentation");
         Scanner scanner = new Scanner(System.in);
         while(true){
                 int cardId = metroPresentation.authenticateUser();

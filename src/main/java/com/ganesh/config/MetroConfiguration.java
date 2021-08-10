@@ -20,29 +20,29 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MetroConfiguration {
 
-    @Bean(name = "CardDao")
+    @Bean(name = "cardDao")
     public CardDaoInterface getCardDao(){
         return new CardDao();
     }
 
-    @Bean(name = "TransactionDao")
+    @Bean(name = "transactionDao")
     public TransactionDaoInterface getTransactionDao(){
         return new TransactionDao();
     }
 
-    @Bean(name = "StationDao")
+    @Bean(name = "stationDao")
     public StationDaoInterface getStationDao(){
         return new StationDao();
     }
 
-    @Bean(name = "CardService")
+    @Bean(name = "cardService")
     public CardServiceInterface getCardService(){
         CardService cardService = new CardService();
         cardService.setCardDao(getCardDao());
         return cardService;
     }
 
-    @Bean(name = "TransactionService")
+    @Bean(name = "transactionService")
     public TransactionServiceInterface getTransactionService(){
         TransactionService transactionService = new TransactionService();
         transactionService.setTransactionDao(getTransactionDao());
@@ -51,13 +51,13 @@ public class MetroConfiguration {
         return transactionService;
     }
 
-    @Bean(name = "StationService")
+    @Bean(name = "stationService")
     public StationServiceInterface getStationService(){
         StationService stationService = new StationService();
         stationService.setStationDao(getStationDao());
         return stationService;
     }
-    @Bean(name = "MetroPresentation")
+    @Bean(name = "metroPresentation")
     public MetroPresentationInterface getMetroPresentation(){
         MetroPresentation metroPresentation = new MetroPresentation();
         metroPresentation.setCardService(getCardService());
